@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.125ren;
+            height:100vh;
+            display: -moz-grid;
+            display: -ms-grid;
+            display: grid;
+
+            place-items:center;
+
+            background-color: #000000;
+            color: #e8e8e2;
+        }
+
+        #container {
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: flex;
+
+            width: 90%;
+            max-width: 1100px;
+
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .avatar img {
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 50%;
+            
+            filter:grayscale(1);
+            transition: all 500ms ease-in-out;
+        }
+
+        .avatar img:hover,
+        .avatar img:focus {
+            filter: grayscale(0)
+        }
+
+        .author {
+            margin-bottom: 2rem;
+        }
+
+        .name {
+            font-size: 900;
+            font-size: 2rem;
+        }
+
+        .location {
+            font-weight: 400;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .media-social {
+            margin-bottom: 3rem;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: flex;
+
+            align-items: center;
+            gap: 1rem;
+
+        }
+
+        .links, a:link, a:visited {
+            text-decoration: none;
+            transition: all 300ms ease-in-out;
+        }
+
+        .links:hover,
+        .links:hover {
+            opacity: 0.7;
+        }
+
+        .svg {
+            width: 30px;
+            color: #e8e8e2;
+        }
+
+        .btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .btn {
+            background-color: #3D1766;
+            color: #e8e8e2;
+            border: initial;
+            font-size: 1.125rem;
+            font-family: 'Roboto', sans-serif;
+            padding: 0.8rem 2.5rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 900px) {
+            #container {
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .avatar img {
+                width: 250px;
+                height: 250px;
+            }
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <main id="container">
+        <div class="avatar">
+            <img src="./assets/me.png" />
+        </div>
+        <div class="info">
+            <div class="author">
+                <h2 class="name">Luciano Silva Nascimento</h2>
+                <h5 class="location"><i>Rio de Janeiro, Brasil</i></h5>
+            </div>
+            
+            <p class="description">
+                Profissional com 6 anos de experiência como desenvolvedor de software backend, com habilidades em PHP/Laravel, Mysql e Docker em ambiente Linux, também atuou em períodos menores com frontend
+                usando html, css e javascript. Durante esses anos atuou em áreas como smart cities, plataforma de venda de bebidas
+                para revendedores e delivery de comida.
+            </p>
+
+            <div class="media-social">
+                <a href="https://www.linkedin.com/in/luciano-nascimento-3945871a/" target="_blank" class="links"><i class="fa fa-linkedin" style="font-size:24px;color:#3D1766"></i></i></a>
+                <a href="https://github.com/luciano-nascimento" target="_blank" class="links"><i class="fa fa-github" style="font-size:24px;color:#3D1766"></i></a>
+            </div>
+            <!-- <div class="btns">
+                <button class="btn">Contatar</button>
+            </div>  -->
+
+        </div>
+    </main>
+</body>
+</html>
